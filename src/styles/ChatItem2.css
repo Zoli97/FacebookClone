@@ -1,0 +1,16 @@
+.chat_item {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.chat_info > h4 {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.chat_item:hover {
+  background-color: #eff2f5;
+  border-radius: 8px;
+}

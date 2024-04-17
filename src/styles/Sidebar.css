@@ -1,0 +1,27 @@
+.my__sidebar {
+  padding: 25px 10px;
+  flex: 0.33;
+}
+
+.dark__mode {
+  margin-top: 15px !important;
+  margin-left: 10px !important;
+  margin-bottom: 15px !important;
+  border-radius: 10px !important;
+
+  padding: 10px !important;
+}
+
+/* .dark__mode:hover {
+  background-color: lightgray !important;
+  border-radius: 10px !important;
+} */
+
+.icon__dark__mode {
+  font-size: xx-large !important;
+  color: #2e81f4 !important;
+}
+
+.dark__mode > .icon {
+  color: #2e81f4 !important;
+}

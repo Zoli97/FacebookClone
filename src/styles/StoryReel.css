@@ -1,0 +1,58 @@
+.storyReel {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.story__box {
+  cursor: pointer;
+  width: 40%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reels__box {
+  cursor: pointer;
+  width: 40%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.story__box:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
+}
+
+.reels__box:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
+}
+
+.story__box :is(h4) {
+  color: gray;
+  padding-left: 0.6em;
+}
+
+.reels__box :is(h4) {
+  color: gray;
+  padding-left: 0.6em;
+}

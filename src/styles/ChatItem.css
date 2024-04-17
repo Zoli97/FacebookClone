@@ -1,0 +1,30 @@
+.sidebar-chat {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  cursor: pointer;
+  /* overflow-y: scroll; */
+}
+
+.sidebar-chat > .chat__info {
+  padding-left: 1em;
+}
+
+.sidebar-chat > .avatar {
+  width: 60px;
+  height: 60px;
+}
+
+.sidebar-chat:hover {
+  background-color: #e9ecef;
+  border-radius: 0.6em;
+}
+
+.chat__info > p {
+  color: gray;
+  font-size: small;
+}
+.chat__info > h3 {
+  font-weight: 400;
+  font-size: 18px !important;
+}

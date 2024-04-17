@@ -1,0 +1,50 @@
+//* now create the useContext;
+//* create a custom hook, here in this hook i will use the useContext hook, that will allows me to access both the theme and the setTheme function outside.
+//* if useContext fail to create a context it will return undefined because its need to wrap the App comp in a themeprovider.
+
+const useMyDarkModeTheme = () => {
+  const context = useContext(MyThemeContext);
+  if (context === undefined) {
+    throw new Error("Dark Mode theme must be used within a THemeProvider");
+  }
+
+  return context;
+};
+
+
+
+
+
+
+
+Context API is a perfect alternative to Redux when building small applications. It is much easier to implement. Furthermore, it results in a smaller bundle size and improved project maintainability.
+
+However, the Context API is not built for high-frequency updates at the time of writing this article. You should, therefore, only use it for low-frequency updates
+ like the theme and authentication. This is because whenever the context’s value changes, the descendant components of the Provider will be re-rendered.
+
+
+
+ Widgets*
+ import React from "react";
+
+function Widget() {
+  return (
+    <div className="widgets">
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=1500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId"
+        width="340"
+        height="100%"
+        style={{ border: "none", overflow: "hidden" }}
+        allow="encrypted-media"
+        title="title"
+        className="frame"
+      ></iframe>
+    </div>
+  );
+}
+
+export default Widget;
+
+
+I agree to the Terms and Srvice that my data will be
+taken and sold.

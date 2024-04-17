@@ -1,13 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { Provider } from "react-redux";
+import my_store from "./store/configureStore.js";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+//*  wrap the App component with our ThemeProvider. So that the theme state can be shared with all the children available within App component.The modified index.js look like:
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={my_store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
