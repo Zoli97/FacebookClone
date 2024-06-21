@@ -6,3 +6,13 @@
   justify-content: center;
   align-items: center;
 }
+
+.light.__feed__ {
+  background-color: #f0f2f5;
+}
+
+/* Styles specific to dark mode */
+
+.dark.__feed__ {
+  background-color: #18191a;
+}

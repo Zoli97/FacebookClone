@@ -2,13 +2,18 @@ export const lightTheme = {
   text: "rgb(20, 20, 20)",
   text2: "rgb(55, 55, 55)",
   text_time: "gray",
-  text_bottom: "#e4e6eb",
+  text_bottom: "#000",
   textInvert: "rgb(245, 245, 245)",
   textInvert2: "rgb(210, 210, 210)",
   primary: "rgb(200, 117, 196)",
   primary2: "rgb(200, 117, 147)",
-  background1: "rgb(252, 252, 252)",
+  background1: "#F0F2F5",
   background2: "rgb(225, 225, 225)",
+  bg_icons: "#858689",
+  bg_container_icons: "#F2F2F2",
+  box_shadows:
+    "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;",
+  bg_right_icons_light: "#000000",
 };
 
 export const darkTheme = {
@@ -38,4 +43,6 @@ export const darkTheme = {
   background_hover_listItems: "#343637",
   dropdown_menu_background: "#242526",
   dropdown_menu_background_hover: "#343637",
+  border_bottom: "1px solid rgb(65, 63, 63)",
+  bg_right_icons_dark: "#ffffff",
 };

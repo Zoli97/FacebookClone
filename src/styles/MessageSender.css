@@ -1,10 +1,12 @@
 .meesageSender {
-  width: 100%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
   border-radius: 15px;
-  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   background-color: #ffffff;
 }
 
@@ -26,7 +28,7 @@
   padding: 5px 20px;
   margin: 0 10px;
   border-radius: 999px;
-  background-color: #f0f2f5;
+  /* background-color: #f0f2f5; */
 }
 
 .meesageSender__top > form > input:hover {
@@ -44,6 +46,11 @@
 .meesageSender__bottom {
   display: flex;
   justify-content: space-evenly;
+}
+
+.messageSender__option > h3 {
+  font-size: 14px !important;
+  font-weight: 600;
 }
 
 .messageSender__option {
@@ -64,4 +71,31 @@
 .messageSender__option:hover {
   background-color: #eff2f5;
   border-radius: 20px;
+}
+
+/* Styles specific to light mode */
+.light.__input__ {
+  background-color: #f0f2f5;
+}
+
+.light.__hover__:hover {
+  background-color: #f2f2f2;
+}
+
+/* Styles specific to dark mode */
+
+.dark.__sender__ {
+  background-color: #242526;
+}
+
+.dark.__input__ {
+  background-color: #3a3b3c;
+}
+
+.dark.__hover__:hover {
+  background-color: #4e4f50;
+}
+
+.dark.__text__ {
+  color: #afacac;
 }

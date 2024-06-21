@@ -9,10 +9,11 @@
   display: flex;
   justify-content: space-between;
   position: sticky;
-  background-color: var(--white-bg);
+  /* background-color: var(--white-bg); */
   z-index: 100;
   box-shadow: var(--box-shadow);
-  padding: 15px 20px;
+  padding: 5px;
+  /* border-bottom: 1px solid rgb(65, 63, 63); */
 }
 
 .header__left {
@@ -42,12 +43,13 @@
 .header__middle {
   display: flex;
   justify-content: center;
+  gap: 2em;
   flex: 1;
 }
 
-.header__option > .MuiSvgIcon-root {
+/* .header__option > .MuiSvgIcon-root {
   color: gray;
-}
+} */
 
 .circle > .iconic > .MuiSvgIcon-root {
   width: 0.8em !important;
@@ -63,14 +65,6 @@
   align-items: center;
   padding: 0 30px;
   cursor: pointer;
-}
-
-.header__option:hover {
-  background-color: #eff2f5;
-  border-radius: 10px;
-  align-items: center;
-  padding: 0 30px;
-  border-bottom: none;
 }
 
 .header__info {
@@ -107,4 +101,88 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Common styles for both light and dark modes */
+
+/* Styles specific to light mode */
+
+.light.__header__ {
+  background-color: white;
+}
+
+.light.home:hover {
+  background-color: #e4e6e8;
+}
+.light.watch:hover {
+  background-color: #e4e6e8;
+}
+.light.market:hover {
+  background-color: #e4e6e8;
+}
+.light.group:hover {
+  background-color: #e4e6e8;
+}
+.light.games:hover {
+  background-color: #e4e6e8;
+}
+
+svg.app.light {
+  color: #000 !important;
+}
+
+svg.messenger.light {
+  color: #000 !important;
+}
+
+/* Styles specific to dark mode */
+
+.dark.__header__ {
+  /* Define styles for items in dark mode */
+  background-color: #242526;
+}
+
+.dark.__header__input__ {
+  background-color: #3a3b3c;
+}
+
+.dark.__header__input__icon {
+  color: gray;
+}
+.dark.home:hover {
+  background-color: #3a3b3c;
+}
+.dark.watch:hover {
+  background-color: #3a3b3c;
+}
+.dark.market:hover {
+  background-color: #3a3b3c;
+}
+
+.dark.group:hover {
+  background-color: #3a3b3c;
+}
+.dark.games:hover {
+  background-color: #3a3b3c;
+}
+
+.dark.app {
+  background-color: #4e4f50;
+}
+.dark.messenger {
+  background-color: #4e4f50;
+}
+
+.dark.notify {
+  background-color: #4e4f50;
+}
+
+svg.app.dark {
+  color: #fff !important;
+}
+
+svg.messenger.dark {
+  color: #fff !important;
+}
+svg.notify.dark {
+  color: #fff !important;
 }

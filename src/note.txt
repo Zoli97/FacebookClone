@@ -48,3 +48,99 @@ export default Widget;
 
 I agree to the Terms and Srvice that my data will be
 taken and sold.
+
+
+{/* <div className="story__box">
+<MenuBookOutlinedIcon className="storyI" />
+<h4>Stories</h4>
+</div>
+<div className="reels__box">
+<VideoLibraryIcon className="reelsI" />
+<h4>Reels</h4>
+</div> */}
+
+cdd0d3
+<Carousel animation={Zoom} slidesToShow={3}>
+
+
+Data layer Redux/React context api (the same pattern)
+wraps the app.
+when i push inisde the data layer, i can actually use anything that i push in 
+the data layer.
+When i login in the login page i push the user into the data layer.
+
+login
+|
+data layer
+once that are inside the data layer i can access inside of any component.
+REdux state management is more logical than the context its the same pattern, dispatch things
+into reducer and dispatching actions the reducer listens to them
+GLobal State.
+
+
+Dark theme
+
+To create a context, you use the createContext function provided by React. It returns an object with two components: Provider and Consumer.
+The Provider component is used to wrap a part of your component tree where you want to make the context data available. It takes a value prop, which can be any JavaScript value (e.g., an object, a function, a string).
+The useContext hook is the modern way to consume context in functional components. It allows you to access the context value directly within a component. You simply pass the context object (created using createContext) as an argument to useContext, and it returns the current context value.
+You can create multiple context providers in your app, each responsible for different types of data. This allows you to organize and manage the sharing of data efficiently.
+
+
+
+//connect the db to the build
+createa a collection of posts like a nosql or mongodb.
+collection is like array of objects, each doc resemble a post.
+onsnapshot-> when anything is updated added changed anything inside the collection it will give a real time snapshot.
+everytime i make a post then i get the feed to the db.
+-  
+
+//shouldnt allow someone to send the post if the value of the input is empty.
+
+const sendPost = async (event) => {
+  event.preventDefault();
+  //add message to the post
+  if (!inputRef.current.value) return;
+
+  try {
+    const postRef = await addDoc(collection(db, "fb_posts"), {
+      post: inputRef.current.value,
+      timestamp: serverTimestamp(),
+    });
+
+    inputRef.current.value = "";
+  } catch (err) {
+    console.log(err);
+  }
+};\
+
+
+
+1
+rules_version = '2';
+2
+service cloud.firestore {
+3
+  match /databases/{database}/documents {
+4
+    match /{document=**} {
+5
+      allow read, write: if
+6
+          request.time < timestamp.date(2022, 12, 1);
+7
+    }
+8
+  }
+9
+}
+<Post
+profilePic="https://images.pexels.com/photos/13835274/pexels-photo-13835274.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+message="Wow this works"
+timestamp="This is a timestamp"
+username="Toma Robert"
+image="https://images.pexels.com/photos/7778196/pexels-photo-7778196.jpeg?auto=compress&cs=tinysrgb&w=1600"
+/>
+
+<Post />
+
+new Date(timestamp?.toDate()).toUTCString()

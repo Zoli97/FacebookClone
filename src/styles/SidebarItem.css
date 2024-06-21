@@ -9,7 +9,7 @@
 .sidebarItem {
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
 }
 
@@ -26,5 +26,27 @@
 
 .sidebarItem > .MuiSvgIcon-root {
   font-size: xx-large;
-  color: var(--color-icon);
+}
+
+/* Styles specific to light mode */
+.light .items:hover {
+  /* Define styles for items in light mode */
+  background-color: #e4e6e8;
+}
+
+/* Styles specific to dark mode */
+.dark .items {
+  /* Define styles for items in dark mode */
+}
+
+/* Hover effect for items */
+.items:hover {
+  /* Default hover styles */
+  background-color: #e4e6e8;
+}
+
+/* Hover effect for items in dark mode */
+.dark .items:hover {
+  /* Override hover styles for dark mode */
+  background-color: #303031; /* Example dark mode hover background color */
 }

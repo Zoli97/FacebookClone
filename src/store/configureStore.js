@@ -3,7 +3,7 @@ import { themeSlice } from "./theme.js";
 import { chatSlice } from "./chat.js";
 const my_store = configureStore({
   reducer: {
-    my_theme_mode: themeSlice.reducer,
+    // my_theme_mode: themeSlice.reducer,
     chat: chatSlice.reducer,
   },
 });

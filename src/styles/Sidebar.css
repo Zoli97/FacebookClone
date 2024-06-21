@@ -1,6 +1,7 @@
 .my__sidebar {
-  padding: 25px 10px;
+  padding: 25px 10px 25px 7em;
   flex: 0.33;
+  font-size: 14px;
 }
 
 .dark__mode {
@@ -17,11 +18,34 @@
   border-radius: 10px !important;
 } */
 
-.icon__dark__mode {
+/* .icon__dark__mode {
   font-size: xx-large !important;
   color: #2e81f4 !important;
 }
 
 .dark__mode > .icon {
   color: #2e81f4 !important;
+} */
+
+.light.sidebarrr {
+  background-color: #f0f2f5;
+}
+.sidebarrr.dark,
+.sidebarrr.dark a {
+  /* Dark Theme */
+  background-color: #18191a !important;
+  color: white !important;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profile > h4 {
+  margin-left: 10px;
+  font-weight: 400;
+  font-style: normal;
 }

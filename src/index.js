@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { Provider } from "react-redux";
-import my_store from "./store/configureStore.js";
+import { StateProvider } from "./context/StateProvider.js";
+import reducer, { initialState } from "./context/reducer.js";
+
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -11,9 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //*  wrap the App component with our ThemeProvider. So that the theme state can be shared with all the children available within App component.The modified index.js look like:
 root.render(
   <React.StrictMode>
-    <Provider store={my_store}>
+    <StateProvider reducer={reducer} initialState={initialState}>
       <App />
-    </Provider>
+    </StateProvider>
   </React.StrictMode>
 );
 

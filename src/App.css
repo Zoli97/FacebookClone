@@ -1,10 +1,11 @@
 .App {
-  background-color: #f1f2f5;
+  background-color: #f0f2f5;
   position: relative;
 }
 
 .app__body {
   display: flex;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .chat__header {

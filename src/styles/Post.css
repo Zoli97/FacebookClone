@@ -1,9 +1,11 @@
 .post {
-  width: 100%;
+  width: 85%;
   margin-top: 15px;
   border-radius: 15px;
-  /* background-color: #ffffff; */
-  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  background-color: #ffffff;
+  /* box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75); */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .post__image > img {
@@ -56,9 +58,45 @@
 
 .post__option > p {
   margin-left: 10px;
+  font-size: 14px !important;
+  font-weight: 600 !important;
 }
 
 .post__option:hover {
   background: #eff2f5;
   border-radius: 6px;
+}
+
+.like,
+.comm,
+.share {
+}
+
+.light.btn__hover:hover {
+  background-color: #f2f2f2;
+}
+
+/* Styles specific to dark mode */
+
+.dark.__post__ {
+  background-color: #242526;
+}
+
+.dark.__user__ {
+  color: #d3d3d3;
+}
+
+.dark.__time__ {
+  color: #b8b6b6;
+}
+
+.dark.__text_btm__ {
+  color: #e1e3e7;
+}
+
+.dark.btn__hover:hover {
+  background-color: #4e4f50;
+}
+.dark.__text__ {
+  color: #afacac;
 }

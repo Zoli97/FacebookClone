@@ -11,6 +11,20 @@
 }
 
 .chat_item:hover {
-  background-color: #eff2f5;
+  background-color: #e4e6e8;
   border-radius: 8px;
+}
+
+/* Styles specific to dark mode */
+
+.dark.__chatlist__ {
+  background-color: #18191a;
+}
+
+.dark.text {
+  color: #e1e3e7;
+}
+.dark .chat__item:hover {
+  /* Override hover styles for dark mode */
+  background-color: #303031; /* Example dark mode hover background color */
 }

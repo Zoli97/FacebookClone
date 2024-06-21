@@ -1,23 +1,28 @@
-import firebase from "firebase/compat/app";
-import "firebase/compat/firestore";
-import "firebase/compat/auth";
+// import firebase from "firebase/compat/app";
+// import "firebase/compat/firestore";
+// import "firebase/compat/auth";
+
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBun8D_DWiP3DUPdxXpU6jA0Nf8RP_DtFo",
-  authDomain: "facebook-clone-151f2.firebaseapp.com",
-  projectId: "facebook-clone-151f2",
-  storageBucket: "facebook-clone-151f2.appspot.com",
-  messagingSenderId: "127945075537",
-  appId: "1:127945075537:web:6f15e08a44637162840170",
-  measurementId: "G-V67L4MXYC5",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
-
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+//connect my frontend to my fireabse backend
+const firebaseApp = initializeApp(firebaseConfig);
 
 //access the db
-const db = firebaseApp.firestore();
-const authentication = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
+//provider tell fireabse that i want the gogle login service
+const db = getFirestore(firebaseApp);
+const authentication = getAuth(firebaseApp);
+const provider = new GoogleAuthProvider();
 
 //explicit
 export { authentication, provider };

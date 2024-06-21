@@ -2,3 +2,8 @@
   flex: 0.33;
   padding: 1em;
 }
+
+/* Styles specific to light mode */
+.light.__chatlist__ {
+  background-color: #f0f2f5;
+}
